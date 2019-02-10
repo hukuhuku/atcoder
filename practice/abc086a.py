@@ -1,6 +1,11 @@
-a,b = map(int,input().split())
+N = int(input())
+L = list(map(int,input().split()))
 
-if (a*b)%2 == 0:
-    print("Even")
+
+a = max(L)
+L.remove(a)
+
+if a >= sum(L):
+    print("No")
 else:
-    print("Odd")
+    print("Yes")

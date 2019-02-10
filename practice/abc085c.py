@@ -1,20 +1,17 @@
-#N,Y = map(int,input().split())
-N,Y = 9,45000
-#x+y+z = n
-#10000x + 5000y + 1000z = Y
+N,Y = map(int,input().split())
 
-flag = True
+is_combination = False
+
 for x in range(N+1):
     for y in range(N-x+1):
         z = (N-(x+y))
-        print(x,y,z)
         if 10000*x + 5000*y + 1000*z == Y:
             a,b,c = x,y,z
-            flag = False
+            is_combination = True
             break
             
-if flag:
-  print(-1,-1,-1)
-else:
+if is_combination:
   print(a,b,c)
+else:
+  print(-1,-1,-1)
   
